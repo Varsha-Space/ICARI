@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ICARI 2022 | CALL FOR PAPER | CONFERENCE REGISTRATION</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" type="image/x-icon"
+	th:href="@{/images/icariLogo.jpeg}">
+
+<!-- Bootstrap CSS v5.0.2 -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+<!-- Required CSS -->
+<link rel="stylesheet" th:href="@{/css/index.css}">
+
+</head>
+<body>
+
+	<!-- Navbar Starts -->
+	<nav class="navbar navbar-expand-sm navbar-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand text-light" th:href="@{/}"><img
+				th:src="@{/images/icariLogo.jpeg}" alt="icari logo" height="80rem"></a>
+			<button class="navbar-toggler bg-dark" type="button"
+				data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end"
+				id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link text-light"
+						th:href="@{/}">HOME</a></li>
+					<li class="nav-item"><a class="nav-link text-light" href="#">PUBLICATION</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar Ends -->
+
+	<!-- --------------------------------Main Starts-------------------------------- -->
+	<!-- Banner Starts -->
+	<div class="container-fluid" style="height: 10vh;"></div>
+	<!-- Banner Ends -->
+	<!-- Main Starts -->
+	<div class="container-fluid p-5"
+		th:style="'background: url('+@{/images/architecture-3588171.jpg}+'); background-size: cover; height: 150vh;'">
+		<div
+			class="container text-white col-lg-5 col-md-5 col-sm-12 col-xs-12">
+			<div class="alert" th:classappend="${status} ? 'alert-success' : ''" th:text="${status} ? 'Registration Successful!' : ''" role="alert">
+			</div>
+			<form novalidate="novalidate" th:action="@{/process}" method="post"
+				th:object="${confRegData}">
+				<div class="mb-3 mt-3">
+					<label for="text" class="form-label required">NAME:</label> <input
+						type="text" th:value="${confRegData.name}"
+						th:classappend="${#fields.hasErrors('name')?'is-invalid':''}"
+						class="form-control" id="conference-text"
+						placeholder="Enter your Name" name="name" required>
+					<div class="invalid-feedback"
+						th:each="e : ${#fields.errors('name')}" th:text="${e}"></div>
+				</div>
+				<div class="mb-3">
+					<label for="text" class="form-label">EMAIL ADDRESS:</label> <input
+						type="email" th:value="${confRegData.email}"
+						th:classappend="${#fields.hasErrors('email')?'is-invalid':''}"
+						class="form-control" id="conference-email-address"
+						placeholder="Enter your Email-Id" name="email" required>
+					<div class="invalid-feedback"
+						th:each="e : ${#fields.errors('email')}" th:text="${e}"></div>
+				</div>
+				<div class="mb-3">
+					<label for="text" class="form-label">PHONE NUMBER</label> <input
+						type="email" th:value="${confRegData.phone}"
+						th:classappend="${#fields.hasErrors('phone')?'is-invalid':''}"
+						class="form-control" id="conference-phone"
+						placeholder="Enter your Mobile Number" name="phone" required>
+					<div class="invalid-feedback"
+						th:each="e : ${#fields.errors('phone')}" th:text="${e}"></div>
+				</div>
+				<div class="mb-3">
+					<label for="text" class="form-label">UNIVERSITY:</label> <input
+						type="text" th:value="${confRegData.university}"
+						th:classappend="${#fields.hasErrors('university')?'is-invalid':''}"
+						class="form-control" id="conference-university-name"
+						placeholder="Enter your University Name" name="university"
+						required>
+					<div class="invalid-feedback"
+						th:each="e : ${#fields.errors('university')}" th:text="${e}"></div>
+				</div>
+				<div class="mb-3">
+					<label for="text" class="form-label">COLLEGE:</label> <input
+						type="text" th:value="${confRegData.college}"
+						th:classappend="${#fields.hasErrors('college')?'is-invalid':''}"
+						class="form-control" id="conference-college-name"
+						placeholder="Enter your College Name" name="college" required>
+					<div class="invalid-feedback"
+						th:each="e : ${#fields.errors('college')}" th:text="${e}"></div>
+				</div>
+				<div class="mb-3">
+					<label for="text" class="form-label">DEPARTMENT:</label> <input
+						type="text" th:value="${confRegData.department}"
+						th:classappend="${#fields.hasErrors('department')?'is-invalid':''}"
+						class="form-control" id="conference-department"
+						placeholder="Enter your Department" name="department" required>
+					<div class="invalid-feedback"
+						th:each="e : ${#fields.errors('department')}" th:text="${e}"></div>
+				</div>
+				<label for="text" class="form-label">ATTENDEE CATEGORY:</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="type"
+						value="student" id="Student" checked> <label
+						class="form-check-label" for="flexRadioDefault1"> STUDENT
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="type"
+						value="faculty" id="Faculty"> <label
+						class="form-check-label" for="flexRadioDefault2"> FACULTY
+					</label>
+				</div>
+				<br>
+				<div class="container text-center">
+					<button type="submit" class="btn btn-primary">SUBMIT</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Main Ends -->
+	<!-- Footer Start -->
+	<!-- <div id="footer" class="container-fluid bg-light p-3 text-center border-top">
+      <h6 class="m-2">&#169; Copyright 2021, All Rights Reserved </h6>
+    </div> -->
+	<!-- Footer Ends -->
+	<!-- --------------------------------Main Ends-------------------------------- -->
+
+	<!-- Bootstrap JavaScript Libraries -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+</body>
+</html>

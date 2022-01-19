@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>ICARI 2022 | CALL FOR PAPER | CONFERENCE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/icariLogo.jpeg}">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Required CSS -->
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+  </head>
+
+    <body th:style="'background: url('+@{/images/architecture-3588171.jpg}+'); background-size: cover;'">
+    
+    <!-- Navbar Starts -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" th:href="@{/}"><img th:src="@{/images/icariLogo.jpeg}" alt="icari logo" height="80rem"></a>
+        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-light" th:href="@{/}">HOME</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" th:href="@{/confReg}">CONFERENCE REGISTRATION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">PUBLICATION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">ABOUT US</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#contact_us">CONTACT US</a>
+            </li>  
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <!-- --------------------------------Main Starts-------------------------------- -->
+    
+    <!-- Banner Starts -->
+    <div class="container-fluid pt-5" style="height: 45vh;">
+      <div class="container pt-5 text-center">
+        <h1 class="mt-2 pt-5 text-light" style="text-shadow: 0px 0px 5px red; letter-spacing: 1px;">INTERNATIONAL CONFERENCE ON ADVANCE RESEARCH AND INNOVATION</h1>
+      </div>
+    </div>
+    <div class="conf_event container-fluid text-center banner p-5">
+      <div class="container text-center text-light">
+        <h3 style="letter-spacing: 1px; text-shadow: 0px 5px 5px black;">9<sup>th</sup> International Conference on Advance Research and Innovation</h3><br>
+        <h4 style="letter-spacing: 1px; text-shadow: 0px 5px 5px black;">(E-Conference)</h4><br>
+        <h5 style="letter-spacing: 1px; text-shadow: 0px 5px 5px black;">Organized By: </h5><br>
+        <img th:src="@{/images/ctu.jpg}" alt="CTU LOGO">
+      </div>
+    </div><br><br><br>
+    <!-- Banner Ends -->
+    <!-- About Us Starts -->
+    <div id="about_us" class="container-fluid pb-2" style="height: auto; "> 
+       <div class="banner container rounded pt-5">
+        <h1 class=" p-3 rounded text-center" style="color: orangered; text-shadow: 0px 5px 5px black;">ABOUT CONFERENCE</h1>
+        <img class="image-fluid mt-5 text-center" th:src="@{/images/conference.svg}" alt="Conference img" height="250rem" width="100%">
+        <p class="text-white mt-5" style="text-align: justify; font-size: large;">INTERNATIONAL CONFERENCE ON ADVANCE RESEARCH AND INNOVATION 2022 (ICARI-2022) is a premier international conference which aims at current
+          challenges in science and technological advancements with research updates and innovations that are shaping the 
+          future of mankind. This conference welcomes all scientists, engineers,
+          technocrats and researchers from all walks of society to share their knowledge and wisdom
+          for exploring solutions to current and future challenges. This platform provides an
+          international forum for researchers to exchange ideas in recent advances on various
+          aspects of theories, analysis, experimentation and computational methods in science,
+          technology and management etc. <br><br>
+          International Conference of Advance Research and Innovation (ICARI-2022) is devoted to a wide range of subfields in Science and Technology. Whiele it encourages a broad spectrum of contribution in Science and Technology. Articls of interdiscipilinary nature ae welcome. International Conference of Advance and Research and Innovation (ICARI-2022) is a peer-reviewed scientific conference that publishes original articles ad research notes in all areas of general studies welcome to well-designed and well-documented experimental studies and advancedknowledge in the related subject areas. Manuscripts submitted for publication will be subjected to single-blind peer-review and assessed for their contribution to the scientific understanding off Science and Technology. Work resulting in fundamental insights thatbenefit our society, isrelevant to the conference. <br><br>
+          It is a multi-disciplinary conference, which includes all areas of Science and Technology
+          used for material research including old material and new material performance in various
+          field. Innovative original research papers on topics covered under following broad areas (but
+          not limited to). Materials used in –
+          Applied Science, Social Science, Earth Science, Management Science, Pharmaceutical
+          Science, Computer Science and Engineering, Electronics Engineering, Mechanical
+          Engineering, Civil Engineering, Electrical Engineering, Industrial Engineering, Production
+          Engineering, Automotive Engineering, Marine Engineering, Automation Engineering,
+          Architecture and Building Materials, Bio-Mechanical Engineering, Chemical Science and
+          Engineering, Material Engineering, Bio-Medical Engineering, Environmental Science and
+          Engineering, Information Technology, Humanities, Commerce and Economics, Health 
+          Science, Medical Science, Biotechnology, Physical Science and Education, Cyber physical
+          system, Life Science, Micro Biology, Innovation of Arts and Sociology, Space Science, etc.</p>
+       </div>
+    </div>
+    <!-- About Us Ends -->
+    <!-- Contact Us Starts -->
+    <div id="contact_us" class="row container-fluid bg-light text-center mt-5 p-5">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pt-5" style="border-right: 2px dotted orangered;"><h6><Strong>CONTACT :</Strong></h6><h6><strong> Dr. Praveen Kumar, DEAN (SOHPE), </strong></h6><h6><strong>+91 94 1748 0730</Strong></h6><h6><strong> WhiteLint Global Pvt. Ltd. ,</strong></h6><h6><strong>+91 11 4669 6206</Strong></h6></div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
+      <h6> <strong>INDUSTRY PARTNER: </strong></h6><img th:src="@{/images/whitelint-logo.png}" alt="Whitelint Logo" height="60rem" width="80%"></div>
+    </div>
+    <!-- Contact Us Ends -->
+    <!-- --------------------------------Main Ends-------------------------------- -->
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>

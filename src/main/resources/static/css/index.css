@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    font-size: 96.5%;
+    font-family: sans-serif;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+/* navbar */
+.nav-item{
+    border-right: 1px solid orangered;
+}
+.navbar{
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 0px 25px orangered;
+  z-index: 25;
+}
+.nav-link, .dropdown-item{
+  font-size: medium;
+}
+.dropdown-item:hover{
+  color: orangered;
+}
+  /* Banner */
+  .banner-heading{
+    letter-spacing: 12px;
+    text-shadow: 15px 18px 5px black;
+  }
+  /* Main */
+  .banner{
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  /* Footer Page */
+  #footer{
+    box-shadow: 0px 0px 25px orangered;
+  }
